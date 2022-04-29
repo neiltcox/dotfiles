@@ -24,8 +24,11 @@ let g:dracula_colorterm = 0
 let g:dracula_italic = 0
 colorscheme dracula
 
-" show line numberss
+" line numberss
 set number
 
 " typescript syntax highlighting performance compatibility
 set re=0
+
+" vim-gitgutter update speed
+set updatetime=100
