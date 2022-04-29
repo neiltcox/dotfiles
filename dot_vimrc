@@ -42,3 +42,6 @@ set cursorline
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu
+
+" prettier Allow auto formatting for files without "@format" or "@prettier"
+let g:prettier#autoformat_require_pragma = 0
