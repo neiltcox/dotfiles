@@ -24,7 +24,7 @@ let g:dracula_colorterm = 0
 let g:dracula_italic = 0
 colorscheme dracula
 
-" line numberss
+" line numbers
 set number
 
 " typescript syntax highlighting performance compatibility
