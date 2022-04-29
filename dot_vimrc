@@ -36,5 +36,5 @@ set updatetime=100
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 
-" Highlight cursor line underneath the cursor vertically.
-set cursorcolumn
+" Enable auto completion menu after pressing TAB.
+set wildmenu
