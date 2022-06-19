@@ -20,5 +20,5 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-" setup fsf
+# setup fzf 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
