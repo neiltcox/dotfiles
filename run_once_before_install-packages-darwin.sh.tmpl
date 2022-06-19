@@ -1,10 +1,13 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
+# formatting docs: https://github.com/Homebrew/homebrew-bundle/blob/master/README.md
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
 brew "vim"
 cask "iterm2"
+tap "homebrew/cask-fonts"
+cask "font-fira-code"
 EOF
 {{ end -}}
 
