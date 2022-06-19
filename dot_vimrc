@@ -11,22 +11,34 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " vim-plug
 call plug#begin()
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'yggdroot/indentline'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'tomlion/vim-solidity'
 Plug 'vim-airline/vim-airline'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
+Plug 'junegunn/fzf'
 call plug#end()
 
-" terminal compatibility
-set termguicolors
+" colorscheme
+set background=light
+colorscheme github
+let g:one_allow_italics = 1
+let g:airline_theme='github'
 
-" color scheme
-let g:dracula_colorterm = 0
-let g:dracula_italic = 0
-colorscheme dracula
+" enable rainbow
+let g:rainbow_active = 1
+
+" terminal compatibility
+set t_Co=256
+set termguicolors
+set nocompatible
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 
 " line numbers
 set number
@@ -46,3 +58,6 @@ set wildmenu
 " prettier Allow auto formatting for files without "@format" or "@prettier"
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+
+" split vertical panes to the right
+set splitright
